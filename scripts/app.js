@@ -45,7 +45,7 @@ angular.module('angularRestfulAuth', [
             return response || $q.when(response);
         }
     };
-})];
+});
 
     }
 ]);
