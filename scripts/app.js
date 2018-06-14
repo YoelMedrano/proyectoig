@@ -48,10 +48,7 @@ angular.module('angularRestfulAuth', [
         $rootScope.$on('$locationChangeStart', function (event, next, current) {
             // redirect to login page if not logged in
             if ($location.path() !== '/login' && !$rootScope.globals.currentUser) {
-                $location.path('/login');
-                
-            }else if ($location.path() == '/login' && !$rootScope.globals.currentUser) {
-                $location.path('/registration');
+                $location.path('/login','/registration');
                 
             }
         });
