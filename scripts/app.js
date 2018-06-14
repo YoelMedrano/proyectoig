@@ -1,50 +1,53 @@
 'use strict';
 
-angular.module('angularRestfulAuth', [
-    'ngStorage',
+// declare modules
+angular.module('Authentication', []);
+angular.module('Home', []);
+
+angular.module('BasicHttpAuthExample', [
+    'Authentication',
+    'Home',
     'ngRoute',
-    'angular-loading-bar'
+    'ngCookies'
 ])
-.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
+ 
+.config(['$routeProvider', function ($routeProvider) {
 
-    $routeProvider.
-        when('/', {
-            templateUrl: 'partials/home.html',
-            controller: 'HomeCtrl'
-        }).
-        when('/login', {
-            templateUrl: 'partials/login.html',
-            controller: 'HomeCtrl'
-        }).
-        when('/registration', {
-            templateUrl: 'partials/registro.html',
-            controller: 'HomeCtrl'
-        }).
-        when('/userprofile', {
-            templateUrl: 'partials/userperfil.html',
-            controller: 'HomeCtrl'
-        }).
-        otherwise({
-            redirectTo: '/'
+    $routeProvider
+        .when('/', {
+            controller: 'HomeController',
+            templateUrl: 'partials/home.html'
+        })
+    
+        .when('/login', {
+            controller: 'LoginController',
+            templateUrl: 'partials/login.html'
+        })
+        
+        .when('/registration', {
+            controller: 'RegisterController',
+            templateUrl: 'partials/registro.html'
+        })
+        .when('/userprofile', {
+            controller: 'ProfileController',
+            templateUrl: 'partials/userperfil.html'
+        })
+ 
+        .otherwise({ redirectTo: '/' });
+}])
+ 
+.run(['$rootScope', '$location', '$cookieStore', '$http',
+    function ($rootScope, $location, $cookieStore, $http) {
+        // keep user logged in after page refresh
+        $rootScope.globals = $cookieStore.get('globals') || {};
+        if ($rootScope.globals.currentUser) {
+            $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata; // jshint ignore:line
+        }
+ 
+        $rootScope.$on('$locationChangeStart', function (event, next, current) {
+            // redirect to login page if not logged in
+            if ($location.path() !== '/login' && !$rootScope.globals.currentUser) {
+                $location.path('/login');
+            }
         });
-
-    $httpProvider.interceptors.push(['$q', '$location', '$localStorage', function($q, $location, $localStorage) {
-            return {
-                request: function (config) {
-                    config.headers = config.headers || {};
-                    if ($localStorage.token) {
-                        config.headers.Authorization = 'Bearer ' + $localStorage.token;
-                    }
-                    return config;
-                },
-                responseError: function(response) {
-                    if(response.status === 401 || response.status === 403) {
-                        $location.path('#/login');
-                    }
-                    return $q.reject(response);
-                }
-            };
-        }]);
-
-    }
-]);
+}]);
