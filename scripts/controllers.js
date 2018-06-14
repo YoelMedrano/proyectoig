@@ -20,8 +20,8 @@ angular.module('angularRestfulAuth')
                     window.location = "/";    
                 }
             }, function() {
-                $scope.error = 'Failed to signin';
-            })
+                $rootScope.error = 'Failed to signin';
+            }
         };
 
         $scope.signup = function() {
