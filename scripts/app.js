@@ -43,7 +43,8 @@ angular.module('angularRestfulAuth', [
                     }
                     return $q.reject(response);
                 }
-};
+            };
+        }]);
 
     }
 ]);
