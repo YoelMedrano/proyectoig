@@ -1,18 +1,64 @@
-<div class="row">
-    <div class="col-lg-12">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <strong>Restful Authentication System with AngularJS & NodeJS Example</strong>
-            </div>
-            <div class="panel-body">
-                <p>In this demo you can see following actions;</p>
-                <ul>
-                    <li>Signin</li>
-                    <li>Signup</li>
-                    <li>Logout</li>
-                    <li>Click "Me" link when you signin</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+input {
+    display: block;
+    color: black;
+    text-align: left ;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+input{
+        width: 300px;
+}    
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+
+.active {
+    background-color: #4CAF50;
+}
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="#Inicio">Inicio</a></li>
+  <li><a href="#Perfil">Perfil</a></li>
+  <li><a href="#contact">Amigos</a></li>
+   <input   type="text" style="float:right" placeholder="Buscar contenido multimedia...">
+ 
+</ul>
+
+
+</body>
+</html>
