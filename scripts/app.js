@@ -50,7 +50,7 @@ angular.module('angularRestfulAuth', [
             if ($location.path() !== '/login' && !$rootScope.globals.currentUser) {
                 $location.path('/login');
                 
-            }else if ($location.path() !== '/login' && !$rootScope.globals.currentUser) {
+            }else if ($location.path() == '/login' && !$rootScope.globals.currentUser) {
                 $location.path('/registration');
                 
             }
