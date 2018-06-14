@@ -15,9 +15,9 @@ angular.module('angularRestfulAuth', [
 .config(['$routeProvider', function ($routeProvider) {
 
     $routeProvider
-        .when('/', {
+        .when('/registration', {
             controller: 'HomeCtrl',
-            templateUrl: 'partials/home.html'
+            templateUrl: 'partials/registro.html'
         })
     
         .when('/login', {
@@ -25,10 +25,10 @@ angular.module('angularRestfulAuth', [
             templateUrl: 'partials/login.html'
         })
         
-        .when('/registration', {
+        .when('/', {
             controller: 'HomeCtrl',
-            templateUrl: 'partials/registro.html'
-})
+            templateUrl: 'partials/home.html'
+        })
         .when('/userprofile', {
             controller: 'HomeCtrl',
             templateUrl: 'partials/userperfil.html'
