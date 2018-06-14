@@ -14,6 +14,7 @@ angular.module('angularRestfulAuth')
             Main.signin(formData, function(res) {
                 if (res.type == false) {
                     alert(res.data)    
+                    $rootScope.error = 'Failed to signin'
                 } else {
                    // window.localStorage.setItem('token',res.data.token);
                     $localStorage.token = res.token;
