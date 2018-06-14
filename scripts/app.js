@@ -2,9 +2,11 @@
 
 // declare modules
 angular.module('Authentication', []);
+angular.module('Home', []);
 
 angular.module('angularRestfulAuth', [
     'Authentication',
+    'Home',
     'ngStorage',
     'ngRoute',
 'angular-loading-bar',
@@ -15,7 +17,7 @@ angular.module('angularRestfulAuth', [
 
     $routeProvider
         .when('/', {
-            controller: 'HomeCtrl',
+            controller: 'HomeController',
             templateUrl: 'partials/home.html'
         })
     
