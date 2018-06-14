@@ -7,7 +7,7 @@ angular.module('angularRestfulAuth', [
     'Authentication',
     'ngStorage',
     'ngRoute',
-'angular-loading-bar,
+'angular-loading-bar',
     'ngCookies'
 ])
  
