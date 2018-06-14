@@ -27,7 +27,7 @@ angular.module('angularRestfulAuth', [
         
         .when('/', {
             controller: 'HomeCtrl',
-            templateUrl: 'partials/home.html'
+            templateUrl: 'partials/registro.html'
         })
         .when('/userprofile', {
             controller: 'HomeCtrl',
