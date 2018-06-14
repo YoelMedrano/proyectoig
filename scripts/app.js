@@ -4,7 +4,7 @@
 angular.module('Authentication', []);
 angular.module('Home', []);
 
-angular.module('BasicHttpAuthExample', [
+angular.module('angularRestfulAuth', [
     'Authentication',
     'Home',
     'ngRoute',
