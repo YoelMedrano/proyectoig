@@ -37,7 +37,7 @@ angular.module('angularRestfulAuth', [
                     }
                     return config;
                 },
-                responseError: function(response) {
+                response: function(response) {
                     if(response.status === 401 || response.status === 403) {
                         $location.path('/login');
                     }
