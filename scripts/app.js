@@ -17,7 +17,7 @@ angular.module('angularRestfulAuth', [
 
     $routeProvider
         .when('/', {
-            controller: 'HomeController',
+            controller: 'HomeCtrl',
             templateUrl: 'partials/home.html'
         })
     
