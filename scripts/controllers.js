@@ -21,7 +21,7 @@ angular.module('angularRestfulAuth')
                 }
             }, function() {
                 $rootScope.error = 'Failed to signin';
-            }
+            })
         };
 
         $scope.signup = function() {
