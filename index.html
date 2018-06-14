@@ -37,7 +37,12 @@
 </head>
 
 <body ng-app="angularRestfulAuth">
-    <div data-ng-show="token" data-ng-controller="HomeCtrl">
+    <div  data-ng-controller="HomeCtrl">
+        <li><a ng-href="#/">Home</a></li>
+                    <li data-ng-show="token"><a ng-href="#/userprofile"></a></li>
+                    <li data-ng-hide="token"><a ng-href="#/login"></a></li>
+                    <li data-ng-hide="token"><a ng-href="#/registration"></a></li>
+<li data-ng-show="token"><a ng-click="logout()"></a></li>
     </div>
 
    
