@@ -42,7 +42,7 @@ angular.module('angularRestfulAuth')
                     window.location = "#/login";  
                 }
             }, function() {
-                $rootScope.error = 'Failed to signup';
+                $rootScope.error = 'Error al registar';
             })
         };
 
