@@ -31,7 +31,7 @@ angular.module('Authentication')
                       
             },1000)
             .error(function (response) {
-              response.message = response;
+              response.message = response.error;
               callback(response);
               
             });
