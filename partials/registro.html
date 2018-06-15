@@ -6,7 +6,7 @@
 				<center><img src="../images/logo.png"></center>
 				<form class="login100-form validate-form" role="form" ng-submit="signup()">
 					<span class="login100-form-title p-b-33">
-						
+					<div ng-show="error" class="alert alert-danger">{{error}}</div>	
 					</span>
 					<div class="wrap-input100 rs2 validate-input" data-validate = "Debe ingresar un Nombre ">
 						<input class="input100" type="text" id="firstName" name="firstName" placeholder="Nombre" ng-model="firstName">
