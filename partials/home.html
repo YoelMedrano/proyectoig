@@ -154,13 +154,12 @@ img {vertical-align: middle;}
 
 
   <li><a href="#/login">Logout</a></li>
-   <form><input   type="text" style="float:right" placeholder="Buscar contenido multimedia...">
-   <button type="submit" #/mediaig>
-							Buscar
-       </button>
-    </form>
-
- 
+   
+	<form action="#/mediaig">
+        <input   type="text" style="float:right" placeholder="Buscar contenido multimedia...">
+        <input type="submit" style="float:right" value="Submit">
+   </form>
+   <butt
 </ul>
 
 
@@ -195,8 +194,13 @@ img {vertical-align: middle;}
   <span class="dot" onclick="currentSlide(2)"></span> 
   <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
-
+<script src="/scripts/app.js"></script>
+<script src="/scripts/controllers.js"></script>
+<script src="/scripts/services.js"></script>
+<script src="services/login/controller.js"></script>
+<script src="services/login/services.js"></script>
 <script>
+	
 var slideIndex = 1;
 showSlides(slideIndex);
 
