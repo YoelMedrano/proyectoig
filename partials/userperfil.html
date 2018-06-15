@@ -1,38 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
 
-	<div class="limiter">
-		<div class="container-login100">
 
-			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
-                <div class="box-pestanas">
-               
-                	
-            
-</div>
-				<div class="box-user">
-                <div class="text-center p-t-45 p-b-4">
-						<span class="txt1">
-							<h2>Pedro Perez</h2>
-						</span>
-					</div>
-                 <center><img src="../images/pedro.jpg"></center>
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
 
-                 <span class="txt1">
-							<center><h3>Datos de cuenta</h3></center>
-				</span>	
-				<span class="txt1">
-							<h3>Nombre: Pedro perez</h3>
-				</span>	
-				<span class="txt1">
-							<h3>Correo: pedro@gmail.com</h3>
-				</span>	
+li:last-child {
+    border-right: none;
+}
 
-				<span class="txt1">
-							<h3>Nacimiento: 16/05/1997</h3>
-				</span>	
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+input {
+    display: block;
+    color: black;
+    text-align: left ;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+input{
+        width: 300px;
+}    
+li a:hover:not(.active) {
+    background-color: #111;
+}
+img {
+    align-items:  left;
+    border-right:1px solid #bbb;
+}
 
-				</div>
+</style>
+</head>
+<body>
 
-		</div>
-	</div>
-	
+<ul>
+  <li><a class="active" href="#Inicio">Inicio</a></li>
+  <li><a href="#Perfil">Perfil</a></li>
+  <li><a href="#contact">Amigos</a></li>
+  <li><a href="#/login">Logout</a></li>
+   <input   type="text" style="float:right" placeholder="Buscar contenido multimedia...">
+ 
+</ul>
 
+
+<div style="padding: 20px 300px"> Nombre: </div>
+<div style="padding: 10px 300px"> Correo: </div>
+<div style="padding: 10px 300px"> Fecha de nacimiento: </div>
+
+<img src="perfil.png" style="width:222px;height:222px;border:0;" >
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
+<script src="/lib/ngStorage.js"></script>
+<script src="/lib/loading-bar.js"></script>
+<script src="//code.angularjs.org/1.2.13/angular-cookies.js"></script>
+<script src="/scripts/app.js"></script>
+<script src="/scripts/controllers.js"></script>
+<script src="/scripts/services.js"></script>
+<script src="services/login/controller.js"></script>
+<script src="services/login/services.js"></script>
+    <script src="/lib/animsition/js/animsition.min.js"></script>
+    <script src="/lib/bootstrap/js/popper.js"></script>
+    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/lib/select2/select2.min.js"></script>
+    <script src="/lib/daterangepicker/moment.min.js"></script>
+    <script src="/lib/daterangepicker/daterangepicker.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <script src="/lib/countdowntime/countdowntime.js"></script>
+    <script src="/scripts/main.js"></script>
+
+</body>
+</html>
