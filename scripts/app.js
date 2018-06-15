@@ -3,6 +3,7 @@
 // declare modules
 angular.module('Authentication', []);
 
+
 angular.module('angularRestfulAuth', [
     'Authentication',
     'ngStorage',
@@ -14,9 +15,9 @@ angular.module('angularRestfulAuth', [
 .config(['$routeProvider', function ($routeProvider) {
 
     $routeProvider
-        .when('/', {
+        .when('/registration', {
             controller: 'HomeCtrl',
-            templateUrl: 'partials/home.html'
+            templateUrl: 'partials/registro.html'
         })
     
         .when('/login', {
@@ -24,10 +25,10 @@ angular.module('angularRestfulAuth', [
             templateUrl: 'partials/login.html'
         })
         
-        .when('/registration', {
-            templateUrl: 'partials/registro.html',
-            controller: 'HomeCtrl'
-})
+        .when('/', {
+            controller: 'HomeCtrl',
+            templateUrl: 'partials/home.html'
+        })
         .when('/userprofile', {
             controller: 'HomeCtrl',
             templateUrl: 'partials/userperfil.html'
@@ -46,8 +47,9 @@ angular.module('angularRestfulAuth', [
  
         $rootScope.$on('$locationChangeStart', function (event, next, current) {
             // redirect to login page if not logged in
-            if ($location.path() !== '/login' && !$rootScope.globals.currentUser) {
-                $location.path('/');
+            if ($location.path() !== '/login' && !$rootScope.globals.currentUser ) {
+                window.location="#/login";
+                
             }
         });
         

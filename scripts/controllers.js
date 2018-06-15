@@ -20,7 +20,7 @@ angular.module('angularRestfulAuth')
                     window.location = "/";    
                 }
             }, function() {
-                $scope.error = 'Failed to signin';
+                $scope.error = 'Error al registar';
             })
         };
 
@@ -36,13 +36,13 @@ angular.module('angularRestfulAuth')
 
             Main.signup(formData, function(res) {
                 if (res.type == false) {
-                    alert(res.data)
+                    alert(res.data);
                 } else {
                     $localStorage.token = res.token;
-                    window.location = "/"    
+                    window.location = "#/login";  
                 }
             }, function() {
-                $rootScope.error = 'Failed to signup';
+                $rootScope.error = 'Error al registar';
             })
         };
 

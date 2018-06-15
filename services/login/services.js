@@ -26,11 +26,12 @@ angular.module('Authentication')
              $http.post( 'https://proyectois.herokuapp.com/account/login', {email : email , password : password})
               .success(function (response){
                        var response= { success: email && password };
+                       
                        callback(response);
                       
             },1000)
             .error(function (response) {
-              response.message = 'Email or password is incorrect';
+              response.message = "Email o Contraseña invalida";
               callback(response);
               
             });
