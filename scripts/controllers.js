@@ -36,10 +36,10 @@ angular.module('angularRestfulAuth')
 
             Main.signup(formData, function(res) {
                 if (res.type == false) {
-                    alert(res.data)
+                    alert(res.data);
                 } else {
                     $localStorage.token = res.token;
-                    window.location = "/"    
+                    window.location = "#/login";  
                 }
             }, function() {
                 $rootScope.error = 'Failed to signup';
