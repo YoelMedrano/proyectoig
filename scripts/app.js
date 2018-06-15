@@ -20,6 +20,10 @@ angular.module('angularRestfulAuth', [
             templateUrl: 'partials/registro.html'
         })
     
+        .when('/mediaig', {
+            controller: 'HomeCtrl',
+            templateUrl: 'partials/instagram.html'
+        })      
         .when('/login', {
             controller: 'LoginController',
             templateUrl: 'partials/login.html'
