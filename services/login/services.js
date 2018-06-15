@@ -26,6 +26,8 @@ angular.module('Authentication')
              $http.post( 'https://proyectois.herokuapp.com/account/login', {email : email , password : password})
               .success(function (response){
                        var response= { success: email && password };
+                       $scope.data.error = { message: error, status: status}
+                       $scope.error($scope.data.error.status);
                        callback(response);
                       
             },1000)
