@@ -147,7 +147,7 @@ img {vertical-align: middle;}
 </head>
 <body>
 
-<ul>
+<ul data-ng-controller="HomeCtrl">
   <li><a class="active" href="#Inicio">Inicio</a></li>
   <li><a href="#Perfil">Perfil</a></li>
   <li><a href="#contact">Amigos</a></li>
@@ -162,7 +162,7 @@ img {vertical-align: middle;}
    <butt
 </ul>
 
- <div ng-view data-ng-controller="HomeCtrl" ></div>
+ <div class="contenedor" ng-view>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
