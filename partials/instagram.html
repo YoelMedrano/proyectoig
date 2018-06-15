@@ -1,0 +1,67 @@
+<div class="limiter">
+
+<h1>Por "tag"</h1>
+<ul id="galeria-instagram"></ul>
+<p>Tag "<strong>zamora</strong>"</p>
+<style type="text/css">
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic);
+
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  max-width:728px;
+  margin:0 auto;
+  font-family: 'Open Sans', sans-serif;
+  text-align:center;
+}
+
+h1{
+  margin: 30px 0;
+  font-size:35px;
+  font-weight: 700;
+  text-align:center;  
+}
+
+ul{
+  margin-bottom:30px;
+  overflow:hidden;
+}
+
+li{
+  float:left;
+  width:16.66%;
+  list-style-type: none;
+}
+
+img{
+  float:left;
+  width:100%;
+  height: auto;
+}
+</style>
+<script type="text/javascript">
+var clientid = 'd1a19717f478473b985cabac6b8ee211',
+       hashtag='zamora',
+       num_photos = 6;
+
+$.ajax({
+    url: 'https://api.instagram.com/v1/tags/' + hashtag + '/media/recent',
+    dataType: 'jsonp',
+    type: 'GET',
+    data: {client_id: clientid, count: num_photos},
+    success: function(data){
+        console.log(data);
+        for(x in data.data){
+            $('#galeria-instagram').append('<li><img src="'+data.data[x].images.thumbnail.url+'"></li>');  
+        }
+    },
+    error: function(data){
+        console.log(data);
+    }
+});
+</script>
+
+</div>
