@@ -24,7 +24,7 @@
 					</div>
 
 					<div class="container-login100-form-btn m-t-20">
-						<button class="login100-form-btn3" type="submit">
+						<button class="login100-form-btn3" type="submit" id="enviar">
 							Ingresar
 						</button>
 					</div>
@@ -54,5 +54,16 @@
 	</div>
 	
 
-	
+<script type="text/javascript">
+	enviar=document.getElementById("enviar");
+enviar.onclick=validarDatos;
+
+function validarDatos () {
+    var elemento =document.getElementById("correo");
+    if (elemento.checkValidity() ==false && elemento.required){
+    //document.getElementById("mensajes").innerHTML=`<p>Debe ingresar un ${elemento.id} valido</p>`;
+    document.getElementById("mensajes").innerHTML="<p>Debe ingresar un "+elemento.id +" valido</p>";
+}
+}
+</script>
 	
