@@ -34,7 +34,7 @@
 					</div>
 
 					<div class="wrap-input100 rs1 validate-input" data-validate="Debe ingresar su contraseña">
-						<input class="input100" type="password" name="password" placeholder="Contraseña" id="password" ng-model="password" required>
+						<input class="input100" type="password" name="password" placeholder="Contraseña" id="password" ng-model="password" pattern="{6,15}" title="Debe tener mas de 5 caracteres">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>
@@ -60,5 +60,20 @@
 		</div>
 	</div>
 	
+<script type="text/javascript">
+		window.onload = function () {
+			document.getElementById("password").onchange = validatePassword;
+			document.getElementById("confirmationPassword").onchange = validatePassword;
+		}
+		function validatePassword(){
+			var pass2=document.getElementById("confirmationPassword").value;
+			var pass1=document.getElementById("password").value;
+			if(pass1!=pass2)
+				document.getElementById("confirmationPassword").setCustomValidity("Las contraseñas no son iguales");
+			else
+				document.getElementById("confirmationPassword").setCustomValidity('');	 
+				//empty string means no validation error
+		}
 
+</script>
 	
