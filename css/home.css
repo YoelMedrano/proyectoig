@@ -4,3 +4,7 @@ body{
 	 background-position: 50% 15%;
 }
 
+button{
+border-radius:10px;
+outline:none;
+}
