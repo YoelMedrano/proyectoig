@@ -1,92 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
+  <title>Find Cloud</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
-li {
-    float: left;
-    border-right:1px solid #bbb;
-}
-
-li:last-child {
-    border-right: none;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-input {
-    display: block;
-    color: black;
-    text-align: left ;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-input{
-        width: 300px;
-}    
-li a:hover:not(.active) {
-    background-color: #111;
-}
-img {
-    align-items:  left;
-    border-right:1px solid #bbb;
-}
-
-</style>
+  <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
+    <!-- barra de navegacion  -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="home.html" class="navbar-brand" href="#FindCloud">Find Cloud</a>
+    </div>
 
-<ul>
-  <li><a class="active" href="#Inicio">Inicio</a></li>
-  <li><a href="#Perfil">Perfil</a></li>
-  <li><a href="#contact">Amigos</a></li>
-  <li><a href="#/login">Logout</a></li>
-   <input   type="text" style="float:right" placeholder="Buscar contenido multimedia...">
- 
-</ul>
+    <form class="navbar-form navbar-left">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="registro.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+    <!--fin  barra de navegacion  -->
 
-
-<div style="padding: 20px 300px"> Nombre: </div>
-<div style="padding: 10px 300px"> Correo: </div>
-<div style="padding: 10px 300px"> Fecha de nacimiento: </div>
-
-<img src="profile.png" style="width:222px;height:222px;border:0;" >
-
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
-<script src="/lib/ngStorage.js"></script>
-<script src="/lib/loading-bar.js"></script>
-<script src="//code.angularjs.org/1.2.13/angular-cookies.js"></script>
-<script src="/scripts/app.js"></script>
-<script src="/scripts/controllers.js"></script>
-<script src="/scripts/services.js"></script>
-<script src="services/login/controller.js"></script>
-<script src="services/login/services.js"></script>
-    <script src="/lib/animsition/js/animsition.min.js"></script>
-    <script src="/lib/bootstrap/js/popper.js"></script>
-    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/lib/select2/select2.min.js"></script>
-    <script src="/lib/daterangepicker/moment.min.js"></script>
-    <script src="/lib/daterangepicker/daterangepicker.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
-    <script src="/lib/countdowntime/countdowntime.js"></script>
-    <script src="/scripts/main.js"></script>
 
 </body>
 </html>
