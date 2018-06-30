@@ -1,0 +1,9 @@
+body{
+	 background-image: url("../images/banner.jpg");
+	 -webkit-text-size-adjust: none;
+	 background-position: 50% 15%;
+}
+
+.FindCloud {
+	size: 20px;
+}
