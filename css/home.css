@@ -8,3 +8,9 @@ button{
 border-radius:10px;
 outline:none;
 }
+.modal{
+    display: none;
+}
+.modal-header{    
+     display:none;    
+}
