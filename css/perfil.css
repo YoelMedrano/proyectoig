@@ -12,11 +12,11 @@
     background: #cbcbcf;
    position: fixed; top:150px; right: 70px;
    width: 20%;
-   height: 50%;
+   height: 60%;
 }
-.amigos{
+.friends{
    background: #cbcbcf;
-   position: fixed; top:150px; right: 70px;
-   width: 20%;
-   height: 50%;
+   position: fixed; top:150px; left : 270px;
+   width: 50%;
+   height: 60%;
 }
