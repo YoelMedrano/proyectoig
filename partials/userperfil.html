@@ -8,7 +8,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
   <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/perfil.css">
 </head>
 <body>
     <!-- barra de navegacion  -->
@@ -34,6 +36,41 @@
 </nav>
     <!--fin  barra de navegacion  -->
 
+     <!-- buscar amigos -->
+                <div class="card ">
+                  <div class="card-body">
+                    
+                            <form>
+                                    <div class="form-group">
+                                      <label for="formGroupExampleInput">Buscar Amigos:</label>
+                                      <input type="text" class="form-control" id="busquedaUser" placeholder="Search">
+                                    </div>
+                                    <button type="button" class="btn btn-primary botonBuscar" onclick="buscarAmigo()" >Buscar</button>
+                            </form>
+    
+                    </div>
+                </div>
+         <!--fin buscar amigos -->       
+       <!--datos perfil  -->
+                  <div>
+                        <div class="card-body">
+                            <div class=" text-right" id="textoVariable">
+                                  Perfil:
+                                        
+                            </div>
+                        </div>
+                    </div>
+        <!--fin  datos perfil -->    
 
+               <!-- muestra amigos -->
+                  <div>
+                        <div class="amigos">
+                            <div class=" text-center" id="amigos">
+                                  Perfil:
+                                        
+                            </div>
+                        </div>
+                    </div>
+        <!--fin  muestra amigos -->           
 </body>
 </html>
