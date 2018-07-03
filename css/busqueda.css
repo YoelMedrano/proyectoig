@@ -1,0 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic);
+
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  max-width:728px;
+  margin:0 auto;
+  font-family: 'Open Sans', sans-serif;
+  text-align:center;
+}
+
+h1{
+  margin: 30px 0;
+  font-size:35px;
+  font-weight: 700;
+  text-align:center;  
+}
+
+ul{
+  margin-bottom:30px;
+  overflow:hidden;
+}
+
+li{
+  float:left;
+  width:16.66%;
+  list-style-type: none;
+}
+
+img{
+  float:left;
+  width:100%;
+  height: auto;
+}
