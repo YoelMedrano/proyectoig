@@ -14,3 +14,24 @@ outline:none;
 .modal-header{    
      display:none;    
 }
+.SignUp{
+	   max-width: 400px;
+    height: auto;
+    margin: auto;
+    top:25px;
+    background: #cbcbcf;
+    padding: 10px;
+    font-family: rale;
+    border-radius: 15px;
+}
+.LogIn{
+	max-width: 400px;
+    height: auto;
+    margin: auto;
+    top:25px;
+    background: #cbcbcf;
+    padding: 10px;
+    font-family: rale;
+    border-radius: 15px;
+
+}
