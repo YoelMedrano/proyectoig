@@ -28,6 +28,7 @@ angular.module('angularRestfulAuth')
             var formData = {
                  firstName : $scope.firstName,
                  lastName : $scope.lastName,
+                 gender: $scope.gender,
                  dateOfBirth : $scope.dateOfBirth ,
                  email : $scope.email,
                  password : $scope.password,
